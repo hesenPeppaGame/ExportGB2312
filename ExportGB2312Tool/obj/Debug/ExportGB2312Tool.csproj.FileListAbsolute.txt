@@ -1,0 +1,5 @@
+C:\GitHub\ExportGB2312\ExportGB2312Tool\bin\Debug\ExportGB2312Tool.exe
+C:\GitHub\ExportGB2312\ExportGB2312Tool\bin\Debug\ExportGB2312Tool.pdb
+C:\GitHub\ExportGB2312\ExportGB2312Tool\obj\Debug\ExportGB2312Tool.csprojAssemblyReference.cache
+C:\GitHub\ExportGB2312\ExportGB2312Tool\obj\Debug\ExportGB2312Tool.exe
+C:\GitHub\ExportGB2312\ExportGB2312Tool\obj\Debug\ExportGB2312Tool.pdb
