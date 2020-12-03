@@ -1,3 +1,4 @@
+# 此工程不在进行维护
 # ExportGB2312
  Release dotnet V 4.0
  导出GB2312标准所有中文字符
