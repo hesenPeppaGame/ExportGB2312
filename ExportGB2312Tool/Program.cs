@@ -13,8 +13,50 @@ namespace ExportGB2312Tool
     {
         static void Main(string[] args)
         {
-            WriteGB2312File("D://gb2312.txt");
+            WriteGB2312File2("D://gb2312.txt");
         }
+
+        /// <summary>
+        /// 输出GB2312所有字符
+        /// </summary>
+        /// <param name="path"></param>
+        public static void WriteGB2312File2(string path)
+        {
+            StringBuilder sb = new StringBuilder();
+            List<string> GBString = new List<string>();
+            Encoding gb = Encoding.GetEncoding("gb2312");
+            int count = 1;
+            //输出所有ASCII
+            for (int i = 1; i <= 255; i++)
+            {
+                char c = (char)i;//通过强制类型转换来将ASCII码对应的字符数出
+                sb.Append(c.ToString());
+            }
+
+            byte[] by = new byte[2];
+            for (int i = 0xB0; i < 0xF7; i++)
+            {
+                for (int l = 0xA1; l < 0xFE; l++)
+                {
+                    by[0] = (byte)i;
+                    by[1] = (byte)l;
+                    sb.Append(gb.GetString(by));
+                    if (count % 40 == 0)
+                    {
+                        sb.AppendLine();
+                    }
+
+                    count++;
+                }
+
+            }
+
+            using (StreamWriter sw = new StreamWriter(path))
+            {
+                sw.Write(sb.ToString());
+            }
+        }
+
 
         /// <summary>
         /// 输出GB2312所有字符
